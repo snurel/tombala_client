@@ -1,0 +1,21 @@
+.alert-box {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1050; /* Bootstrap alert z-index */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+  opacity: 1;
+  transform: translateX(0); /* Kayarak yukarıdan gelmesi için */
+}
+
+/* Kayarak Gelme */
+.alert-box-enter {
+  opacity: 1;
+  transform: translateX(0); /* Kayarak düzgün bir şekilde gelmesi için */
+}
+
+/* Kayarak Gitme */
+.alert-box-exit {
+  opacity: 0;
+  transform: translateX(220px); /*Kayarak yukarıya gitmesi için */
+}

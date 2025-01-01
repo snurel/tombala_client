@@ -1,0 +1,49 @@
+.coin {
+  text-align: center;
+  padding-top: 4px;
+  color: bisque;
+  font-weight: bold;
+  font-size: 18px; /* Sayı boyutu */
+  width: 50px; /* Madeni para genişliği */
+  height: 50px; /* Madeni para yüksekliği */
+  background: radial-gradient(
+    circle,
+    #a5673f,
+    #6d3f21
+  ); /* Koyu tonlarda bronz geçiş */
+  border-radius: 50%; /* Daire şekli */
+  position: relative; /* İç elementler için konumlandırma */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5),
+    /* Masaya düşen gölge */ inset 2px 2px 3px rgba(255, 255, 255, 0.4),
+    /* Üst iç parlama */ inset -2px -2px 3px rgba(0, 0, 0, 0.5); /* Alt iç gölge */
+}
+
+/* Kabartmalı yazı efekti */
+.coin span {
+  display: inline-block;
+  position: relative;
+  color: #fbe7c6; /* Hafif parlak bir altın rengi */
+  text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.6),
+    /* Üst ve sol parlama */ 2px 2px 3px rgba(0, 0, 0, 0.5); /* Alt ve sağ gölge */
+  font-size: 30px; /* Kabartma efekti daha belirgin */
+  font-weight: bold; /* Daha dikkat çekici */
+}
+
+/* Kalın kenar efekti */
+.coin::before {
+  content: '';
+  width: 90%;
+  height: 8px; /* Kenar kalınlığı */
+  background: linear-gradient(
+    to right,
+    #704126,
+    #a5673f,
+    #704126
+  ); /* Koyu bronz kenar rengi */
+  position: absolute;
+  bottom: -4px; /* Daha belirgin bir alt kenar */
+  left: 5%;
+  border-radius: 50%; /* Kenar için dairesel görünüm */
+  z-index: -1; /* Kenar gövdenin altında kalır */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Kenar gölgesi */
+}
