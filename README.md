@@ -1,8 +1,38 @@
-# React + Vite
+## Tombala
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Kurulum
 
-Currently, two official plugins are available:
+socket.js içindeki sunucu adresini tanımla
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```
+const socket = io('http://localhost:5200');
+```
+
+npm modullerini yükle
+
+```
+npm install
+```
+
+dev modunda çalıştır
+
+```
+npm run dev
+```
+
+## Oynanış
+
+Oyunu yönetmek için clientlardan biri yönetici olmak durumunda.
+
+- Oyuna girişte 'Yönetici olarak başla' seçeneğini seç.
+
+Diğer clientlar oyuncu olarak giriş yapabilmek için:
+
+- önce kullancı adı ve bir anahtar kodu seçip giriş yapar.
+- Yöneticinin paylaştığı 'Oyun Kodu' bilgisini giriş oyuncu olur
+
+Tüm oyuncular giriş yaptıktan sonra yönetici oyunu başlatır ve sayı çekmeye başlar.
+
+Oyun bitmeden bağlantısı kopan oyuncu oyundan atılmaz, tekrar bağlanıp kaldığı yerden devam edebilir.
+
+Bir kazanan olduğu an oyun biter.
