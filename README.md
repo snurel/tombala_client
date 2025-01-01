@@ -29,7 +29,7 @@ Oyunu yönetmek için clientlardan biri yönetici olmak durumunda.
 Diğer clientlar oyuncu olarak giriş yapabilmek için:
 
 - önce kullancı adı ve bir anahtar kodu seçip giriş yapar.
-- Yöneticinin paylaştığı 'Oyun Kodu' bilgisini giriş oyuncu olur
+- Yöneticinin paylaştığı 'Oyun Kodu' bilgisini girip, oyuncu olur
 
 Tüm oyuncular giriş yaptıktan sonra yönetici oyunu başlatır ve sayı çekmeye başlar.
 
