@@ -4,6 +4,7 @@ const initialState = {
   slots: [],
   color: '',
   gameId: -1,
+  playId: -1,
 };
 
 const tombalaSlice = createSlice({
@@ -14,6 +15,7 @@ const tombalaSlice = createSlice({
       state.slots = action.payload.slots;
       state.color = action.payload.color;
       state.gameId = action.payload.gameId;
+      state.playId = action.payload.playId;
     },
     clearCard: (state, action) => {
       state = initialState;

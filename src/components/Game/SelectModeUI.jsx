@@ -28,7 +28,7 @@ export const SelectModeUI = () => {
   };
 
   const nameInitializedListener = (auth) => {
-    dispatch(updateUserName(auth.name));
+    dispatch(updateUserName(auth));
     localStorage.setItem('auth', JSON.stringify(auth));
     setStep(2);
   };
